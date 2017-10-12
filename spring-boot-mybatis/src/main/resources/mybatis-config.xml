@@ -4,4 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <package name="com.yym.examples.mybatis.entity"/>
+    </typeAliases>
+
+    <mappers>
+        <package name="com.yym.examples.mybatis.mapper"/>
+    </mappers>
+
 </configuration>

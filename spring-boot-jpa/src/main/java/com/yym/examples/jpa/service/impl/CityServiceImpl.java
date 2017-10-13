@@ -24,6 +24,11 @@ public class CityServiceImpl implements CityService {
 
 	@Override
 	public List<City> findByCountryCodeLike(String countryCode) {
-		return cityRepository.findByCountryCodeStartingWith(countryCode);
+		return cityRepository.findByCountryCodeIgnoreCase(countryCode);
+	}
+
+	@Override
+	public List<City> findAll() {
+		return cityRepository.findAll();
 	}
 }

@@ -16,5 +16,5 @@ public interface CityRepository extends ExampleRepository<City , Long> {
 	 * @param countryCode
 	 * @return
 	 */
-	List<City> findByCountryCodeStartingWith(String countryCode);
+	List<City> findByCountryCodeIgnoreCase(String countryCode);
 }

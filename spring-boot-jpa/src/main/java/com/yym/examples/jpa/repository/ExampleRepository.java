@@ -4,6 +4,7 @@ import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.Repository;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by yaoyimin on 2017/10/13
@@ -19,4 +20,6 @@ public interface ExampleRepository<T , ID extends Serializable> extends Reposito
 	T findOne(ID id);
 
 	T save(T entity);
+
+	List findAll();
 }

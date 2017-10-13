@@ -12,4 +12,6 @@ public interface CityService {
 	City findById(Long id);
 
 	List<City> findByCountryCodeLike(String countryCode);
+
+	List<City> findAll();
 }

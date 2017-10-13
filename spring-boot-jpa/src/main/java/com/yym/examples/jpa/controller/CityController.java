@@ -26,4 +26,9 @@ public class CityController {
 		return cityService.findByCountryCodeLike(countryCode);
 	}
 
+	@RequestMapping(value = "/city/get/all" , method = RequestMethod.GET)
+	public List<City> findAll(){
+		return cityService.findAll();
+	}
+
 }

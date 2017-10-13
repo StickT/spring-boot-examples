@@ -6,6 +6,8 @@ import com.yym.examples.jpa.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by yaoyimin on 2017/10/13
  */
@@ -18,5 +20,10 @@ public class CityServiceImpl implements CityService {
 	@Override
 	public City findById(Long id) {
 		return cityRepository.findOne(id);
+	}
+
+	@Override
+	public List<City> findByCountryCodeLike(String countryCode) {
+		return cityRepository.findByCountryCodeStartingWith(countryCode);
 	}
 }

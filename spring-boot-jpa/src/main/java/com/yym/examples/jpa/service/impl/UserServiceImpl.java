@@ -8,8 +8,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import java.util.List;
 
 /**
@@ -21,8 +19,8 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserRepository userRepository;
 
-	@Autowired
-	EntityManager entityManager;
+//	@Autowired
+//	EntityManager entityManager;
 
 	@Override
 	public User findById(Long id) {
@@ -37,7 +35,6 @@ public class UserServiceImpl implements UserService {
 //		return query.getResultList();
 		//调用JPA接口直接查询数据
 		return userRepository.findByAgeBetween(after,before);
-		//使用Cri
 	}
 
 	@Override

@@ -15,4 +15,6 @@ public interface UserRepository extends JpaRepository<User,Long>,JpaSpecificatio
 
 	List<User> findByAgeBetween(Integer after,Integer before);
 
+	Long deleteById(Long id);
+
 }

@@ -22,5 +22,8 @@ public interface UserMapper {
 			@Result(property = "age" , column = "age"),
 			@Result(property = "country" , column = "country")
 	})
+
 	User findById(@Param("id")Long id);
+
+	void insert(@Param("user") User user);
 }

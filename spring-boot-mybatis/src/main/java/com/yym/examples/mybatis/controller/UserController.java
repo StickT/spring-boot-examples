@@ -1,12 +1,10 @@
 package com.yym.examples.mybatis.controller;
 
+import com.yym.examples.mybatis.MyException;
 import com.yym.examples.mybatis.entity.User;
 import com.yym.examples.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +25,10 @@ public class UserController {
 	@RequestMapping(value = "/user/get/{id}" , method = RequestMethod.GET)
 	public User findById(@PathVariable Long id){
 		return userService.findById(id);
+	}
+
+	@RequestMapping(value = "/user/add" , method = RequestMethod.PUT)
+	public void create(@RequestBody User user) throws MyException {
+		userService.create(user);
 	}
 }

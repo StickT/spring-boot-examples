@@ -1,5 +1,6 @@
 package com.yym.examples.mybatis.service;
 
+import com.yym.examples.mybatis.MyException;
 import com.yym.examples.mybatis.entity.User;
 
 import java.util.List;
@@ -12,4 +13,6 @@ public interface UserService {
 	List<User> findAll();
 
 	User findById(Long id);
+
+	void create(User user) throws MyException;
 }

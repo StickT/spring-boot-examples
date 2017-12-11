@@ -13,6 +13,8 @@ public class User {
 
 	private String country;
 
+	private String userId;
+
 	public User() {
 	}
 
@@ -52,6 +54,15 @@ public class User {
 		return this;
 	}
 
+	public String getUserId() {
+		return userId;
+	}
+
+	public User setUserId(String userId) {
+		this.userId = userId;
+		return this;
+	}
+
 	@Override
 	public String toString() {
 		return "User{" +
@@ -59,6 +70,7 @@ public class User {
 				", name='" + name + '\'' +
 				", age=" + age +
 				", country='" + country + '\'' +
+				", userId='" + userId + '\'' +
 				'}';
 	}
 }
